@@ -6,10 +6,8 @@
   "main": "src/main.js",
   "scripts": {
     
-    // 🎯 CORRECCIÓN CLAVE: Eliminamos 'src/' para compensar la duplicación de ruta en Render.
     "start": "node main.js", 
     
-    // Este script se mantiene con 'src/' porque es para uso local donde sí funciona la ruta completa.
     "dev": "nodemon src/main.js",
     "build": "echo \"Nada que construir, es una app Node.js con Express\"",
     "test": "jest"
