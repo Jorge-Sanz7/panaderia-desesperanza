@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "Sistema de gestión para panadería",
   
-  "main": "src/main.js",
+  // 1. Apunta el campo principal a la ubicación correcta (public/js/main.js)
+  "main": "public/js/main.js", 
   "scripts": {
     
-    "start": "node main.js", 
+    // 2. Apunta el script de inicio de Render a la ubicación correcta
+    "start": "node public/js/main.js", 
     
-    "dev": "nodemon src/main.js",
+    // 3. Apunta el script de desarrollo local a la ubicación correcta
+    "dev": "nodemon public/js/main.js", 
     "build": "echo \"Nada que construir, es una app Node.js con Express\"",
     "test": "jest"
   },
