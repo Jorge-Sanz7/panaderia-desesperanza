@@ -2,10 +2,13 @@
   "name": "panaderia-desesperanza",
   "version": "1.0.0",
   "description": "Sistema de gestión para panadería",
-  "main": "src/server.js",
+  // 1. CAMBIO: Aquí defines el archivo principal
+  "main": "src/main.js", 
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
+    // 2. CAMBIO: Aquí lo usa Render para iniciar
+    "start": "node src/main.js", 
+    // 3. CAMBIO: Aquí lo usas tú localmente
+    "dev": "nodemon src/main.js", 
     "build": "echo \"Nada que construir, es una app Node.js con Express\"",
     "test": "jest"
   },
