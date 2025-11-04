@@ -4,7 +4,7 @@
   "description": "Sistema de gestión para panadería",
   "main": "src/server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "build": "echo \"Nada que construir, es una app Node.js con Express\"",
     "test": "jest"
