@@ -2,13 +2,15 @@
   "name": "panaderia-desesperanza",
   "version": "1.0.0",
   "description": "Sistema de gestión para panadería",
- 
-  "main": "src/main.js", 
+  
+  "main": "src/main.js",
   "scripts": {
-   
-    "start": "node src/main.js", 
     
-    "dev": "nodemon src/main.js", 
+    // 🎯 CORRECCIÓN CLAVE: Eliminamos 'src/' para compensar la duplicación de ruta en Render.
+    "start": "node main.js", 
+    
+    // Este script se mantiene con 'src/' porque es para uso local donde sí funciona la ruta completa.
+    "dev": "nodemon src/main.js",
     "build": "echo \"Nada que construir, es una app Node.js con Express\"",
     "test": "jest"
   },
