@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería La Desesperanza</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Panadería La Desesperanza</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Inicio</a>
+                    </li>
+                    <!-- Solo visible para admin -->
+                    <li class="nav-item" data-role="admin">
+                        <a class="nav-link" href="/inventario.html">Inventario</a>
+                    </li>
+                    <!-- Visible para usuarios autenticados -->
+                    <li class="nav-item" data-role="any" style="display: none;">
+                        <a class="nav-link" href="/cart.html">
+                            <i class="bi bi-cart"></i> Carrito
+                        </a>
+                    </li>
+                    <!-- Menú de usuario -->
+                    <li class="nav-item dropdown" data-role="any" style="display: none;">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
+                            <span id="userRole"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><button class="dropdown-item" id="logoutBtn">Cerrar Sesión</button></li>
+                        </ul>
+                    </li>
+                    <!-- Botones de sesión para usuarios no autenticados -->
+                    <li class="nav-item" data-role="none">
+                        <button class="nav-link btn btn-link" id="loginBtn">Iniciar Sesión</button>
+                    </li>
+                    <li class="nav-item" data-role="none">
+                        <button class="nav-link btn btn-link" id="registerBtn">Registrarse</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="display-4">Bienvenidos a La Desesperanza</h1>
+                <p class="lead">Pan artesanal y productos de temporada</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Galería de Productos -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Nuestros Productos</h2>
+        <div class="row" id="productGallery">
+            <!-- La galería se llenará dinámicamente con JavaScript -->
+        </div>
+    </div>
+
+    <!-- Modal de Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-link" id="showRegisterBtn">¿No tienes cuenta? Regístrate</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registrarse</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="mb-3">
+                            <label for="registerName" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="registerName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="registerEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="registerPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-link" id="showLoginBtn">¿Ya tienes cuenta? Inicia sesión</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts propios -->
+    <script src="/js/main.js"></script>
+    <script src="/js/auth.js"></script>
+</body>
+</html>

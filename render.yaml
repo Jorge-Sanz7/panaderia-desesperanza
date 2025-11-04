@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: panaderia-desesperanza
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false # Esto indica que se configurará manualmente en el dashboard
+      - key: JWT_SECRET
+        generateValue: true # Render generará un valor seguro
+      - key: PORT
+        value: 3000

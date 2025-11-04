@@ -1,0 +1,31 @@
+.gallery-item {
+    margin-bottom: 1.5rem;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.halloween-badge {
+    background-color: #ff6b00;
+    color: white;
+}
+
+.day-of-dead-badge {
+    background-color: #6f42c1;
+    color: white;
+}
+
+.product-card {
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+}
