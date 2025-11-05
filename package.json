@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "Sistema de gestión para panadería",
   
-  "main": "public/js/main.js",
+  "main": "src/app.js", 
   "scripts": {
     
-    "start": "node public/js/main.js", 
-    
-    "dev": "nodemon public/js/main.js", 
+    "start": "node src/app.js", 
+    "dev": "nodemon src/app.js", 
     "build": "echo \"Nada que construir, es una app Node.js con Express\"",
     "test": "jest"
   },
